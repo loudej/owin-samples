@@ -6,7 +6,7 @@ namespace ConsoleNancySignalR
     {
         public HomeModule()
         {
-            Get["/"] = _ => "Hello, Nancy!";
+            Get["/"] = _ => "Hello, Nancy! Look for /signalr/hubs to see that signalr is mapped.";
         }
     }
 }
