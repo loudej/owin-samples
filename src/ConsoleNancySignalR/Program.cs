@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using ConsoleNancySignalR.Utils;
-using Gate.Adapters.Nancy;
-using Gate.Middleware;
 using Microsoft.HttpListener.Owin;
-using Nancy;
 using Owin;
 using Owin.Builder;
 
