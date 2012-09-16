@@ -13,11 +13,13 @@ namespace ConsoleNancySignalR
     {
         public void Configuration(IAppBuilder app)
         {
+            var bootstrapper = new DefaultNancyBootstrapper();
+
             app
-                .UseFunc(LogRequests)
-                .UseShowExceptions()
-                .MapHubs("/signalr")
-                .RunNancy(new DefaultNancyBootstrapper());
+                .UseFunc(LogRequests) // defined below
+                .UseShowExceptions() // from Gate.Middleware package
+                .MapHubs("/signalr") // from SignalR.Server assembly
+                .RunNancy(bootstrapper); // from Gate.Adapters.Nancy package
         }
 
         private static Func<IDictionary<string, object>, Task> LogRequests(Func<IDictionary<string, object>, Task> next)
