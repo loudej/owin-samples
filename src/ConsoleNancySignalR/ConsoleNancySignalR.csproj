@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleNancySignalR</RootNamespace>
+    <AssemblyName>ConsoleNancySignalR</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gate">
+      <HintPath>..\..\packages\Gate.0.17\lib\net40\Gate.dll</HintPath>
+    </Reference>
+    <Reference Include="Gate.Adapters.Nancy">
+      <HintPath>..\..\packages\Gate.Adapters.Nancy.0.17\lib\net40\Gate.Adapters.Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Gate.Middleware">
+      <HintPath>..\..\packages\Gate.Middleware.0.17\lib\net40\Gate.Middleware.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.HttpListener.Owin">
+      <HintPath>..\..\packages\Microsoft.HttpListener.Owin.0.6\lib\Microsoft.HttpListener.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy">
+      <HintPath>..\..\packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Builder">
+      <HintPath>..\..\packages\Owin.Builder.0.4\lib\net40\Owin.Builder.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin.Startup">
+      <HintPath>..\..\packages\Owin.Startup.0.4\lib\net40\Owin.Startup.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalR">
+      <HintPath>..\..\lib\SignalR.Server\SignalR.dll</HintPath>
+    </Reference>
+    <Reference Include="SignalR.Server">
+      <HintPath>..\..\lib\SignalR.Server\SignalR.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HomeModule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\AppBuilderExtensions.cs" />
+    <Compile Include="Utils\Dict.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

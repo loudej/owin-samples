@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNancySignalR", "src\ConsoleNancySignalR\ConsoleNancySignalR.csproj", "{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15B71E9-3C4B-4783-98AD-D0C8E8E626EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
